@@ -1,0 +1,24 @@
+name: feathersapi
+recipe: laravel
+
+config:
+  php: '7.3'
+  via: nginx
+  webroot: public
+  xdebug: false
+  cache: redis
+  database: mariadb
+
+services:
+  database:
+    type: mariadb:10.3
+    user: mariadb
+    password: mariadb
+    database: plekappdev
+    portforward: 33066
+
+    creds:
+      user: mariadb
+      password: mariadb
+      database: plekappdev
+
